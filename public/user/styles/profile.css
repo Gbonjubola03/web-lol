@@ -1,0 +1,176 @@
+:root {
+  --toxic-green: #39ff14;
+  --blood-red: #ff0000;
+  --cyber-blue: #00f7ff;
+  --void-black: #000000;
+  --neon-purple: #bc13fe;
+}
+
+body {
+  background-color: var(--void-black);
+  color: var(--toxic-green);
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 8px var(--toxic-green);
+}
+
+.profile-container {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid var(--toxic-green);
+  box-shadow: 
+    0 0 30px var(--toxic-green),
+    inset 0 0 20px var(--toxic-green);
+  animation: pulse 2s infinite, glitch 3s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 255, 20, 0.2),
+    transparent
+  );
+  animation: scan 3s linear infinite;
+}
+
+.profile-header {
+  background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(20,20,20,0.9));
+  border: 1px solid var(--cyber-blue);
+  box-shadow: 0 0 15px var(--cyber-blue);
+}
+
+.profile-avatar {
+  border: 3px solid var(--toxic-green);
+  box-shadow: 
+    0 0 20px var(--toxic-green),
+    inset 0 0 10px var(--toxic-green);
+  animation: avatarGlitch 4s infinite;
+  filter: brightness(1.2) contrast(1.2);
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  color: var(--blood-red);
+  text-shadow: 
+    0 0 10px var(--blood-red),
+    0 0 20px var(--blood-red);
+animation: textFlicker 3s infinite;
+}
+.btn-action {
+  background: linear-gradient(45deg, #000, #111);
+  border: 3px solid var(--toxic-green);
+  color: var(--toxic-green);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  min-width: 160px;
+}
+
+
+.btn-action i {
+  font-size: 18px;
+  margin-right: 8px;
+  animation: shake 1s infinite;
+}
+
+.btn-whatsapp {
+  --button-color: #25D366;
+  border-color: var(--button-color);
+  color: var(--button-color);
+}
+
+.btn-chat {
+  --button-color: #00f7ff;
+  border-color: var(--button-color);
+  color: var(--button-color);
+}
+
+.btn-action:hover {
+  transform: scale(1.05);
+  box-shadow: 
+      0 0 20px var(--button-color),
+      inset 0 0 15px var(--button-color);
+  background: var(--button-color);
+  color: #000;
+}
+
+@keyframes bounce {  0%, 100% { top: -20px; }
+  50% { top: -25px; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.btn-action::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  top: 0;
+  left: -100%;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  100% { left: 200%; }
+}.profile-detail-item {  border-left: 3px solid var(--toxic-green);
+  padding-left: 15px;
+  margin: 15px 0;
+  animation: borderPulse 2s infinite;
+}
+
+@keyframes scan {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes textFlicker {
+  0% { opacity: 1; }
+  5% { opacity: 0.8; }
+  10% { opacity: 1; }
+  15% { opacity: 0.3; }
+  20% { opacity: 1; }
+  55% { opacity: 1; }
+  60% { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes borderPulse {
+  0% { border-color: var(--toxic-green); }
+  50% { border-color: var(--blood-red); }
+  100% { border-color: var(--toxic-green); }
+}
+
+@keyframes avatarGlitch {
+  0% { transform: translate(0); filter: hue-rotate(0deg); }
+  1% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
+  2% { transform: translate(2px, -2px); filter: hue-rotate(180deg); }
+  3% { transform: translate(0); filter: hue-rotate(0deg); }
+  98% { transform: translate(0); filter: hue-rotate(0deg); }
+  99% { transform: translate(3px, 3px); filter: hue-rotate(270deg); }
+  100% { transform: translate(0); filter: hue-rotate(0deg); }
+}

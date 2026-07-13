@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(([^/]+/)*[^.]+)\.php /$1 [R=301,L]
+
+ErrorDocument 404 /pages/404.php
+
+Options -Indexes
+Options +FollowSymLinks
+
+RewriteRule ^page/([a-zA-Z0-9_-]+)/ pages/index.php?id=$1
+RewriteRule ^category/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-].*) category.php?cat=$1&subcat=$2
+RewriteRule ^category/([a-zA-Z0-9_-].*) category.php?cat=$1
+RewriteRule ^item/([a-zA-Z0-9_-]+)/(.*) item.php?id=$1&role=$2

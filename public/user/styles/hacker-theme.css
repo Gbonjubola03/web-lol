@@ -1,0 +1,66 @@
+/* Hacker Theme Styles */
+:root {
+    --hacker-bg: #0a0a0a;
+    --hacker-text: #00ff00;
+    --hacker-accent: #ff00ff;
+    --hacker-terminal: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Add theme class to enable switching */
+.hacker-theme {
+    background-color: var(--hacker-bg);
+    color: var(--hacker-text);
+    font-family: var(--hacker-terminal);
+}
+
+.hacker-theme .header {
+    border-bottom: 1px solid var(--hacker-text);
+    box-shadow: 0 0 10px var(--hacker-accent);
+}
+
+.hacker-theme .nav-link {
+    color: var(--hacker-text);
+    text-shadow: 0 0 5px var(--hacker-text);
+}
+
+.hacker-theme .nav-link:hover {
+    color: var(--hacker-accent);
+    text-shadow: 0 0 10px var(--hacker-accent);
+}
+
+.hacker-theme .btn {
+    background: transparent;
+    border: 1px solid var(--hacker-text);
+    color: var(--hacker-text);
+    transition: all 0.3s;
+}
+
+.hacker-theme .btn:hover {
+    background: var(--hacker-text);
+    color: var(--hacker-bg);
+    box-shadow: 0 0 15px var(--hacker-text);
+}
+
+.hacker-theme input, 
+.hacker-theme textarea {
+    background: rgba(0,255,0,0.1);
+    border: 1px solid var(--hacker-text);
+    color: var(--hacker-text);
+    font-family: var(--hacker-terminal);
+}
+
+/* Matrix-style animation for background */
+@keyframes matrix-bg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.hacker-theme {
+    background-image: 
+      linear-gradient(rgba(0,255,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: matrix-bg 20s linear infinite;
+}
+
+/* Preserve original styles by not overriding core layout classes */

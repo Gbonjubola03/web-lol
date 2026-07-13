@@ -1,0 +1,42 @@
+.swal2-popup.ha-popup {
+    color: rgba(166,66,66,1);
+    border: 1px solid rgba(166,66,66,1);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	background: #a82222;
+}
+
+.swal2-popup .swal2-title.ha-title {
+	font-size: 1.2rem;
+	margin-bottom: 1.2rem;
+	color: rgba(166,66,66,1);
+}
+.swal2-popup .swal2-content.ha-content > #swal2-content {
+	font-size: 1rem;
+	text-align: left;
+	display: flex !important;
+	align-items: center;
+	    color: #fff!important;
+}
+
+.ha-actions .swal2-cancel,
+.ha-actions .swal2-confirm{
+	font-size: .9rem !important;
+	border-radius: 0 !important;
+}
+
+.swal2-popup .ha-img {
+	width: 150px;
+	height: 150px;
+}
+
+.swal2-popup .swal2-actions {
+	@media screen and (min-width: 900px) {
+		padding-left: 7rem;	
+	}
+}
+
+.swal2-content {
+    color: #ffffff;
+}

@@ -1,0 +1,54 @@
+hr {
+    border: 2;
+    border-top: 1 solid;
+    color: #125ec3;
+    margin: 1rem 0;
+    opacity: 1;
+}
+.message-count {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #ff9e2a;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+}
+.form-control {
+    border: 1px solid #125ec3;
+}
+.form-label {
+    font-size: 16px;
+}
+
+element.style {
+}
+.btn:not([class*=btn-outline]) {
+    border-color: transparent!important;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+element.style {
+}
+.btn:not([class*=btn-outline]) {
+    border-color: transparent!important;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+.red-color{
+    color:red;
+}
+.green-color{
+    color:green;
+}
