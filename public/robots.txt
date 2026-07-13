@@ -1,7 +1,0 @@
-# Allow Adsense bot full access
-User-agent: Mediapartners-Google
-Allow: /
-
-# Other bots configuration
-User-agent: *
-Allow: /
